@@ -1,0 +1,28 @@
+<div class="border-form-div">
+<h1>Filters</h1>
+
+<%= form_tag filter_submit_path, :method=> :post do %>
+	<%= label_tag "Make" %>  
+	<%= select_tag "make", options_for_select([['BMW' ,'BMW'], ['Audi', 'Audi'],['Honda','Honda'],['Hyundai','Hyundai'],['ICML','ICML'],['Ferrari','Ferrari'], ['Mini','Mini'], ['Skoda', 'Skoda'], ['Tata', 'Tata']]) %>
+	<%= label_tag "Model" %>  
+	<%= select_tag "model", options_for_select([['1 series' ,'1 series'],['A3','A3'], ['A4','A4'], ['3 Series', '3 Series'], ['458 Italia', '458 Italia'], ['Elantra', 'Elantra'], ['City', 'City'], ['Cooper', 'Cooper'], ['Rapid', 'Rapid'], ['Nano', 'Nano']]) %>
+	<%= label_tag "Version" %>  
+	<%= select_tag "version", options_for_select([['116i Hatchback' ,'116i Hatchback'], ['Audi A3 35TDI Attraction','Audi A3 35TDI Attraction'], ['320d', '320d'], ['Ferrari 458 Italia Coupe', 'Ferrari 458 Italia Coupe'], ['Honda City E', 'Honda City E'], ['Honda City S', 'Honda City S'], ['Honda City E', 'Honda City E'], ['Audi A4 2.0 TDI (143bhp)', 'Audi A4 2.0 TDI (143bhp)'],['Hyundai Elantra 1.8 S', 'Hyundai Elantra 1.8 S'], ['Hyundai Elantra 1.6 S', 'Hyundai Elantra 1.6 S'], ['Mini Cooper 1.6', 'Mini Cooper 1.6'], ['Skoda Rapid Active 1.6 MPI MT', 'Skoda Rapid Active 1.6 MPI MT'], ['Tata Nano CX', 'Tata Nano CX']]) %>
+	</br>
+	<%= select_date(date_since = Date.current, options = {}, html_options = {}) %><br>
+	
+<%= submit_tag "submit", :class=>'btn btn-primary' %>
+<% end %>
+
+<style>
+select#date_day,select#date_month,select#date_year
+{
+	width:70px;
+}
+</style>
+
+</div>
+
+
+
+
