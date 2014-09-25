@@ -259,3 +259,6 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+
+[ ![Codeship Status for javangula/socialpro](https://www.codeship.io/projects/7b1d2b30-26ea-0132-4433-66a12251c6c3/status)](https://www.codeship.io/projects/37582)
